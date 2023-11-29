@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <main class="px-20 main-content">
+    <main class="px-5 md:px-20 main-content justify-center">
       <GeneralContentList :iPhoneModels="iPhoneModels" @selectModel="selectModel"/>
       <Column1 :details="iPhoneModels[selectedModel].details"/>
       <Product :name="iPhoneModels[selectedModel].name" :image="iPhoneModels[selectedModel].image"/>
@@ -45,7 +45,18 @@ export default {
 <style scoped>
 .main-content {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1.5rem
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .main-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1280px) {
+  .main-content {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 </style>
