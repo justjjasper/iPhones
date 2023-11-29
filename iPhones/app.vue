@@ -2,9 +2,10 @@
   <div>
     <Header />
     <main class="px-20 main-content">
-      <GeneralContentList :iPhoneModels="iPhoneModels" />
-      <Column1 />
-      <Column2 />
+      <GeneralContentList :iPhoneModels="iPhoneModels" @selectModel="selectModel"/>
+      <Column1 :details="iPhoneModels[selectedModel].details"/>
+      <Product :name="iPhoneModels[selectedModel].name" :image="iPhoneModels[selectedModel].image"/>
+      <Column2 :cons="iPhoneModels[selectedModel].cons"/>
     </main>
   </div>
 </template>
@@ -14,6 +15,7 @@ import Header from '~/components/Header.vue'
 import GeneralContentList from './components/GeneralContentList.vue'
 import Column1 from './components/Column1.vue'
 import Column2 from './components/Column2.vue'
+import Product from './components/Product.vue'
 import { iPhoneModels } from './iPhoneModels'
 
 export default {
@@ -21,13 +23,21 @@ export default {
     Header,
     GeneralContentList,
     Column1,
+    Product,
     Column2
   },
 
   data() {
     return {
-      iPhoneModels
+      iPhoneModels,
+      selectedModel: 0
     };
+  },
+
+  methods: {
+    selectModel(index: number) {
+      this.selectedModel = index
+    }
   }
 };
 </script>
@@ -35,7 +45,7 @@ export default {
 <style scoped>
 .main-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1.5rem
 }
 </style>
