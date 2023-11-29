@@ -1,0 +1,14 @@
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem
+}
+
+.general-content-list {
+  grid-column: 1/span 2;
+    /* Same as
+   grid-column-start: 1;
+   grid-column-end: span 2;
+   */
+  background-color: blue;
+}

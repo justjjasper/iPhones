@@ -1,19 +1,21 @@
 <template>
   <div>
     <Header />
-    <main>
-      <GeneralContentList />
+    <main class="px-20 main-content">
+      <GeneralContentList :iPhoneModels="iPhoneModels" />
       <Column1 />
       <Column2 />
     </main>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import Header from '~/components/Header.vue'
 import GeneralContentList from './components/GeneralContentList.vue'
 import Column1 from './components/Column1.vue'
 import Column2 from './components/Column2.vue'
+import { iPhoneModels } from './iPhoneModels'
+import './app.css'
 
 export default {
   components: {
@@ -25,9 +27,7 @@ export default {
 
   data() {
     return {
-      appData: {
-
-      }
+      iPhoneModels
     };
   }
 };
