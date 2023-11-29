@@ -15,7 +15,6 @@ import GeneralContentList from './components/GeneralContentList.vue'
 import Column1 from './components/Column1.vue'
 import Column2 from './components/Column2.vue'
 import { iPhoneModels } from './iPhoneModels'
-import './app.css'
 
 export default {
   components: {
@@ -32,3 +31,11 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem
+}
+</style>

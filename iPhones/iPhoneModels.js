@@ -1,7 +1,7 @@
 export const iPhoneModels =  [
   {
     name: 'iPhone 1',
-    image: 'url_to_image',
+    image: 'https://www.3nions.com/wp-content/uploads/2021/01/1st-iPhone.jpeg',
     details: [
       'Revolutionized the smartphone industry',
       'Intuitive touch interface',
@@ -24,7 +24,7 @@ export const iPhoneModels =  [
   },
   {
     name: 'iPhone 3G',
-    image: 'url_to_image',
+    image: 'https://www.3nions.com/wp-content/uploads/2021/01/iPhone-3G.jpeg',
     details: [
       'Introduction of 3G connectivity',
       'App Store growth with more applications',
@@ -46,8 +46,27 @@ export const iPhoneModels =  [
     ],
   },
   {
+    name: 'iPhone 3GS',
+    image: 'https://www.3nions.com/wp-content/uploads/2021/01/iPhone-3GS.jpeg',
+    details: [
+      'Improved performance with faster processor',
+      'Introduction of video recording capability',
+      'Voice Control feature added',
+      '3.2 MP camera with autofocus',
+      'Enhanced battery life',
+      'Available in 8GB and 16GB storage options',
+    ],
+    cons: [
+      'Limited multitasking capabilities',
+      'No front-facing camera',
+      'No Retina display',
+      'Released with iOS 3, limited app compatibility over time',
+      'No support for the latest iOS versions',
+    ],
+  },
+  {
     name: 'iPhone 4',
-    image: 'url_to_image',
+    image: 'https://www.3nions.com/wp-content/uploads/2021/01/iPhone-4.jpeg',
     details: [
       'New design with glass front and back',
       'Retina Display for crisp visuals',
@@ -69,33 +88,8 @@ export const iPhoneModels =  [
     ],
   },
   {
-    name: 'iPhone 13',
-    image: 'url_to_image',
-    details: [
-      'Powerful A15 Bionic chip',
-      'Super Retina XDR display',
-      'Advanced camera system with ProRAW and ProRes video',
-      'Improved battery life',
-      'iOS ecosystem integration',
-      'High starting price',
-      'No USB-C port, still uses Lightning',
-      'Incremental design changes',
-      'Screen Size: 6.1 inches (iPhone 13)',
-      'Processor: A15 Bionic chip',
-      'Storage Options: 128GB, 256GB, 512GB',
-      'Release Year: 2021',
-    ],
-    cons: [
-      'High starting price',
-      'No USB-C port, still uses Lightning',
-      'Incremental design changes',
-      'Notable camera bump on the back',
-      'Limited customization compared to some Android devices',
-    ],
-  },
-  {
     name: 'iPhone 5',
-    image: 'url_to_image',
+    image: 'https://www.3nions.com/wp-content/uploads/2021/01/iPhone-5-i.jpeg',
     details: [
       'Taller 4-inch Retina Display',
       'Lightning connector introduced',
@@ -123,7 +117,7 @@ export const iPhoneModels =  [
   },
   {
     name: 'iPhone 6',
-    image: 'url_to_image',
+    image: 'https://www.3nions.com/wp-content/uploads/2021/01/iPhone-6.jpeg',
     details: [
       'Larger 4.7-inch Retina HD display',
       'Slimmer and rounded design',
@@ -151,7 +145,7 @@ export const iPhoneModels =  [
   },
   {
     name: 'iPhone 7',
-    image: 'url_to_image',
+    image: 'https://www.3nions.com/wp-content/uploads/2021/01/iPhone-7.jpeg',
     details: [
       'Introduction of the dual-camera system on iPhone 7 Plus',
       'Water and dust resistance with IP67 rating',
@@ -180,7 +174,7 @@ export const iPhoneModels =  [
   },
   {
     name: 'iPhone 8',
-    image: 'url_to_image',
+    image: 'https://www.3nions.com/wp-content/uploads/2021/01/iPhone-8.jpeg',
     details: [
       'Glass back for wireless charging',
       'Introduction of True Tone display technology',
@@ -208,7 +202,7 @@ export const iPhoneModels =  [
   },
   {
     name: 'iPhone 8 Plus',
-    image: 'url_to_image',
+    image: 'https://www.3nions.com/wp-content/uploads/2021/01/iPhone-8-Plus.jpeg',
     details: [
       'Larger 5.5-inch Retina HD display',
       'Dual-camera system for optical zoom and Portrait mode',
@@ -236,7 +230,7 @@ export const iPhoneModels =  [
   },
   {
     name: 'iPhone X',
-    image: 'url_to_image',
+    image: 'https://www.3nions.com/wp-content/uploads/2021/01/iPhone-X.jpeg',
     details: [
       'Introduction of the Super Retina display with OLED technology',
       'Removal of the Home button, introducing Face ID for authentication',
@@ -264,7 +258,7 @@ export const iPhoneModels =  [
   },
   {
     name: 'iPhone XS',
-    image: 'url_to_image',
+    image: 'https://www.3nions.com/wp-content/uploads/2021/01/iPhone-XS.jpeg',
     details: [
       'Continuation of the Super Retina display with OLED technology',
       'Stainless steel frame with glass back for wireless charging',
@@ -292,7 +286,7 @@ export const iPhoneModels =  [
   },
   {
     name: 'iPhone XS Max',
-    image: 'url_to_image',
+    image: 'https://www.3nions.com/wp-content/uploads/2021/01/iPhone-XS-Max.jpeg',
     details: [
       'Largest iPhone display at the time with a 6.5-inch Super Retina display',
       'Stainless steel frame with glass back for wireless charging',
@@ -320,7 +314,7 @@ export const iPhoneModels =  [
   },
   {
     name: 'iPhone 11',
-    image: 'url_to_image',
+    image: 'https://www.3nions.com/wp-content/uploads/2021/01/iPhone-11.jpeg',
     details: [
       'Liquid Retina display with LCD technology',
       'Aluminum and glass design for wireless charging',
@@ -348,7 +342,7 @@ export const iPhoneModels =  [
   },
   {
     name: 'iPhone 12',
-    image: 'url_to_image',
+    image: 'https://www.3nions.com/wp-content/uploads/2021/01/iPhone-12.jpeg',
     details: [
       'Super Retina XDR display with Ceramic Shield for durability',
       'Ceramic Shield and Glass design for wireless charging',
@@ -376,7 +370,7 @@ export const iPhoneModels =  [
   },
   {
     name: 'iPhone 12 Mini',
-    image: 'url_to_image',
+    image: 'https://www.3nions.com/wp-content/uploads/2021/01/iPhone-12-mini-image.jpeg',
     details: [
       'Super Retina XDR display with Ceramic Shield for durability',
       'Ceramic Shield and Glass design for wireless charging',
@@ -404,7 +398,7 @@ export const iPhoneModels =  [
   },
   {
     name: 'iPhone 12 Pro',
-    image: 'url_to_image',
+    image: 'https://www.3nions.com/wp-content/uploads/2021/01/iPhone-12-pro.jpeg',
     details: [
       'Super Retina XDR display with Ceramic Shield for durability',
       'Ceramic Shield and Stainless Steel design for wireless charging',
@@ -432,7 +426,7 @@ export const iPhoneModels =  [
   },
   {
     name: 'iPhone 12 Pro Max',
-    image: 'url_to_image',
+    image: 'https://www.3nions.com/wp-content/uploads/2021/01/iPhone-12-Pro-Max.jpeg',
     details: [
       'Super Retina XDR display with Ceramic Shield for durability',
       'Ceramic Shield and Stainless Steel design for wireless charging',
@@ -460,7 +454,7 @@ export const iPhoneModels =  [
   },
   {
     name: 'iPhone 13',
-    image: 'url_to_image',
+    image: 'https://www.3nions.com/wp-content/uploads/2021/01/iPhone-13-1.jpeg',
     details: [
       'Super Retina XDR display with Ceramic Shield for durability',
       'Ceramic Shield and Glass design for wireless charging',
@@ -488,7 +482,7 @@ export const iPhoneModels =  [
   },
   {
     name: 'iPhone 13 Pro',
-    image: 'url_to_image',
+    image: 'https://www.3nions.com/wp-content/uploads/2021/01/iPhone-13-Pro-1.jpeg',
     details: [
       'Super Retina XDR display with ProMotion technology',
       'Ceramic Shield and Stainless Steel design for wireless charging',
@@ -516,7 +510,7 @@ export const iPhoneModels =  [
   },
   {
     name: 'iPhone 13 Pro Max',
-    image: 'url_to_image',
+    image: 'https://www.3nions.com/wp-content/uploads/2021/01/iPhone-13-Pro-Max.jpeg',
     details: [
       'Super Retina XDR display with ProMotion technology',
       'Ceramic Shield and Stainless Steel design for wireless charging',

@@ -1,7 +1,7 @@
 <template>
-  <div class="column2 border-2 border-blue-500 p-6 overflow-scroll">
+  <section class="column2 border-2 rounded-lg border-[#E7BDBC] p-6 overflow-scroll">
     Column2
-  </div>
+  </section>
 </template>
 
 <script>
