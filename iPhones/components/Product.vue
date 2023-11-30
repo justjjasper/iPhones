@@ -1,8 +1,8 @@
 <template>
-  <section class="column2 flex-col rounded-lg h-[65vh] p-6 overflow-scroll hidden xl:border-2 xl:flex">
+  <section class="product-container flex flex-col rounded-lg h-[65vh] p-6 sm:overflow-scroll sm:hidden xl:border-2 xl:flex">
     <span class="flex flex-col items-center">
       <span class="text-3xl font-bold">{{ name }}</span>
-      <img :src="image" class="min-h-[200px]"/>
+      <img :src="image" class="h-[250px] sm:min-h-[200px]"/>
     </span>
   </section>
 </template>

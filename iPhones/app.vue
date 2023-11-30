@@ -2,7 +2,7 @@
   <div>
     <Header />
     <main class="px-5 md:px-20 main-content justify-center">
-      <GeneralContentList :iPhoneModels="iPhoneModels" @selectModel="selectModel"/>
+      <GeneralContentList :iPhoneModels="iPhoneModels" @selectModel="selectModel" :dropDownList="dropDownList" @toggleDropDownList="toggleDropDownList"/>
       <Column1 :details="iPhoneModels[selectedModel].details"/>
       <Product :name="iPhoneModels[selectedModel].name" :image="iPhoneModels[selectedModel].image"/>
       <Column2 :cons="iPhoneModels[selectedModel].cons"/>
@@ -30,13 +30,17 @@ export default {
   data() {
     return {
       iPhoneModels,
-      selectedModel: 0
+      selectedModel: 0,
+      dropDownList: false
     };
   },
 
   methods: {
     selectModel(index: number) {
       this.selectedModel = index
+    },
+    toggleDropDownList() {
+      this.dropDownList = !this.dropDownList
     }
   }
 };
@@ -47,6 +51,26 @@ export default {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
+}
+
+/* Adjust order of components during mobile layout*/
+@media(max-width: 640px) {
+  .main-content .general-content-list-container {
+    order: 1;
+  }
+
+  .main-content .product-container {
+    order: 2;
+    height: 290px
+  }
+
+  .main-content .column1 {
+    order: 3;
+  }
+
+  .main-content .column2 {
+    order: 4;
+  }
 }
 
 @media (min-width: 640px) {

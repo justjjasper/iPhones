@@ -1,6 +1,6 @@
 <template>
   <section class="column1 flex flex-col border-2 h-[65vh] rounded-lg border-[#C4E494] p-6 overflow-scroll">
-    <span class="column1-title self-center border-[1px] px-10 py-4 uppercase font-bold rounded-full border-[#C4E494] bg-[#EEF9DF] mb-6">
+    <span class="column1-title self-center border-[1px] px-10 py-4 uppercase font-bold rounded-full border-[#C4E494] bg-[#EEF9DF] mb-6 text-sm md:text-base">
       Specifications
     </span>
 
