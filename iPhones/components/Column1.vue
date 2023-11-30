@@ -1,47 +1,28 @@
 <!--Specifications Column-->
 <template>
-  <section class="column1 flex flex-col border-2 h-[65vh] rounded-lg border-[#C4E494] p-6 overflow-scroll">
-    <span class="column1-title self-center border-[1px] px-10 py-4 uppercase font-bold rounded-full border-[#C4E494] bg-[#EEF9DF] mb-6 text-sm md:text-base">
+  <section class="column1 flex flex-col h-[65vh] rounded-lg pt-6 pb-3 overflow-scroll bg-white shadow-lg">
+    <span class="column1-title self-center border-[1px] px-10 py-4 uppercase font-bold rounded-full border-[#666666] bg-[#f4f4f4] mb-6 text-sm md:text-base">
       Specifications
     </span>
 
-    <div class="column1-list flex flex-col gap-4">
-      <span class="column1-detail-container-name">
+    <div class="column1-list flex flex-col">
+      <span class="column1-detail-container-name px-6 py-4">
         <span class="column1-type">• Model: </span>
         <span class="column1-detail">{{ name }}</span>
       </span>
 
-      <span class="column1-detail-container">
-        <span class="column1-type">• Camera: </span>
-        <span class="column1-detail">{{ details.camera }}</span>
+      <span v-for="({ key, value }, index) in filteredDetails" :key="index" class="column1-detail-container px-6 py-4"
+      :class="{'even-detail': index % 2 === 0, 'odd-detail': index % 2 !==0}">
+        <span class="column1-type capitalize">• {{ key }}: </span>
+        <span class="column1-detail">{{ value }}</span>
       </span>
 
-      <span class="column1-detail-container">
-        <span class="column1-type">• RAM: </span>
-        <span class="column1-detail">{{ details.RAM }}</span>
-      </span>
-
-      <span class="column1-detail-container">
-        <span class="column1-type">• Storage: </span>
-        <span class="column1-detail">{{ details.storage }}</span>
-      </span>
-
-      <span class="column1-detail-container">
-        <span class="column1-type">• Battery: </span>
-        <span class="column1-detail">{{ details.battery }}</span>
-      </span>
-
-      <span class="column1-detail-container">
-        <span class="column1-type">• Processor: </span>
-        <span class="column1-detail">{{ details.processor }}</span>
-      </span>
-
-      <span class="column1-detail-container">
+      <span class="column1-other-detail-container px-6 py-4">
         <span class="column1-type">• Other Details: </span>
           <br/>
           <span class="flex flex-col pl-3">
 
-            <span v-for="otherDetail,i in details.otherDetails" :key="i">
+            <span v-for="otherDetail,i in details.otherDetails" :key="i" class="py-1">
               • {{ otherDetail }}
             </span>
           </span>
@@ -63,7 +44,17 @@ export default {
       type: String,
       required: true
     }
-  }
+  },
+  computed: {
+    filteredDetails() {
+      return this.getObjectEntries(this.details).filter(({ value }) => !Array.isArray(value));
+    }
+  },
+  methods: {
+    getObjectEntries(obj: Record<string, any>) {
+      return Object.entries(obj).map(([key, value]) => ({ key, value }));
+    },
+  },
 }
 </script>
 
@@ -76,9 +67,35 @@ export default {
   display: none;
 }
 
+.even-detail {
+    background-color: rgb(243 244 246);
+  }
+
+.odd-detail {
+  background-color: white;
+}
+
+.column1-other-detail-container{
+  background-color: white;
+}
+
 @media(min-width: 640px) and (max-width:1280px) {
   .column1-detail-container-name {
     display: block;
+    background-color: rgb(243 244 246);
+  }
+
+  /* Responsible for manipulating background color of details depending on screen size  */
+  .even-detail {
+    background-color: white;
+  }
+
+  .odd-detail {
+    background-color: rgb(243 244 246);
+  }
+
+  .column1-other-detail-container{
+    background-color: rgb(243 244 246);
   }
 }
 </style>

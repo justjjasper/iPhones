@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <main class="px-5 md:px-20 main-content justify-center">
+    <main id='app' class="px-5 lg:px-20 main-content bg-gray-50 py-5 ">
       <GeneralContentList :iPhoneModels="iPhoneModels" @selectModel="selectModel" :dropDownList="dropDownList" @toggleDropDownList="toggleDropDownList" :selectedModel="selectedModel"/>
       <Column1 :details="iPhoneModels[selectedModel].details" :name="iPhoneModels[selectedModel].name"/>
       <Product :name="iPhoneModels[selectedModel].name" :image="iPhoneModels[selectedModel].image"/>
@@ -47,6 +47,9 @@ export default {
 </script>
 
 <style scoped>
+#app {
+  background: linear-gradient(#666666, #f4f4f4, #666666);
+}
 .main-content {
   display: grid;
   grid-template-columns: 1fr;

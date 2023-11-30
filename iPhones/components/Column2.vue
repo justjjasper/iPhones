@@ -1,11 +1,12 @@
 <!--Cons Column-->
 <template>
-  <section class="column2 flex flex-col border-2 h-[65vh] rounded-lg border-[#E7BDBC] p-6 overflow-scroll">
-    <span class="column2-title self-center border-[1px] px-10 py-4 uppercase font-bold rounded-full border-[#E7BDBC] bg-[#F6EFEF] mb-6 text-sm md:text-base">
-      Cons
+  <section class="column2 flex flex-col h-[65vh] rounded-lg pt-6 pb-3 overflow-scroll bg-white shadow-lg">
+    <span class="column2-title self-center border-[1px] px-10 py-4 uppercase font-bold rounded-full border-[#666666] bg-[#f4f4f4] mb-6 text-sm md:text-base">
+      Limitations
     </span>
-    <ul class="flex flex-col gap-4">
-      <li v-for="con, index in cons" :key="index">
+    <ul class="flex flex-col">
+      <li v-for="con, index in cons" :key="index" class="px-6 py-4"
+      :class="{ 'bg-white': index % 2 !== 0, 'bg-gray-100': index % 2 === 0 }">
         <span>• {{ con }}</span>
       </li>
     </ul>

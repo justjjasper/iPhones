@@ -37,8 +37,6 @@ export const iPhoneModels =  [
         'Introduction of 3G connectivity',
         'App Store growth with more applications',
         'GPS functionality added',
-        'Plastic back was less durable',
-        'Limited multitasking capabilities',
         'Screen Size: 3.5 inches',
         'Release Year: 2008',
       ],
