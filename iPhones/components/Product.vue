@@ -1,5 +1,6 @@
+<!-- Product Image Column, only appears during mobile layout and larger than 680px screen width-->
 <template>
-  <section class="product-container flex flex-col rounded-lg h-[65vh] p-6 sm:overflow-scroll sm:hidden xl:border-2 xl:flex">
+  <section class="product-container flex flex-col rounded-lg h-[65vh] p-6 sm:overflow-scroll sm:hidden xl:flex">
     <span class="flex flex-col items-center">
       <span class="text-3xl font-bold">{{ name }}</span>
       <img :src="image" class="h-[250px] sm:min-h-[200px]"/>

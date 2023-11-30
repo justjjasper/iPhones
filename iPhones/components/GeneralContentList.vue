@@ -44,6 +44,10 @@ export default {
     dropDownList: {
       type: Boolean,
       required: true
+    },
+    selectedModel: {
+      type: Number,
+      required: true
     }
   },
   methods: {

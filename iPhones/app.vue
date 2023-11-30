@@ -2,8 +2,8 @@
   <div>
     <Header />
     <main class="px-5 md:px-20 main-content justify-center">
-      <GeneralContentList :iPhoneModels="iPhoneModels" @selectModel="selectModel" :dropDownList="dropDownList" @toggleDropDownList="toggleDropDownList"/>
-      <Column1 :details="iPhoneModels[selectedModel].details"/>
+      <GeneralContentList :iPhoneModels="iPhoneModels" @selectModel="selectModel" :dropDownList="dropDownList" @toggleDropDownList="toggleDropDownList" :selectedModel="selectedModel"/>
+      <Column1 :details="iPhoneModels[selectedModel].details" :name="iPhoneModels[selectedModel].name"/>
       <Product :name="iPhoneModels[selectedModel].name" :image="iPhoneModels[selectedModel].image"/>
       <Column2 :cons="iPhoneModels[selectedModel].cons"/>
     </main>

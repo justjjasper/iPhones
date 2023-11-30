@@ -1,3 +1,4 @@
+<!--Cons Column-->
 <template>
   <section class="column2 flex flex-col border-2 h-[65vh] rounded-lg border-[#E7BDBC] p-6 overflow-scroll">
     <span class="column2-title self-center border-[1px] px-10 py-4 uppercase font-bold rounded-full border-[#E7BDBC] bg-[#F6EFEF] mb-6 text-sm md:text-base">

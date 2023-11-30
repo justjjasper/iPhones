@@ -1,3 +1,4 @@
+<!--Specifications Column-->
 <template>
   <section class="column1 flex flex-col border-2 h-[65vh] rounded-lg border-[#C4E494] p-6 overflow-scroll">
     <span class="column1-title self-center border-[1px] px-10 py-4 uppercase font-bold rounded-full border-[#C4E494] bg-[#EEF9DF] mb-6 text-sm md:text-base">
@@ -5,6 +6,11 @@
     </span>
 
     <div class="column1-list flex flex-col gap-4">
+      <span class="column1-detail-container-name">
+        <span class="column1-type">• Model: </span>
+        <span class="column1-detail">{{ name }}</span>
+      </span>
+
       <span class="column1-detail-container">
         <span class="column1-type">• Camera: </span>
         <span class="column1-detail">{{ details.camera }}</span>
@@ -52,6 +58,10 @@ export default {
     details: {
       type: Object as PropType<DetailType>,
       required: true
+    },
+    name: {
+      type: String,
+      required: true
     }
   }
 }
@@ -60,5 +70,15 @@ export default {
 <style scoped>
 .column1-type{
   font-weight: 800;
+}
+
+.column1-detail-container-name {
+  display: none;
+}
+
+@media(min-width: 640px) and (max-width:1280px) {
+  .column1-detail-container-name {
+    display: block;
+  }
 }
 </style>
