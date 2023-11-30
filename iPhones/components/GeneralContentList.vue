@@ -1,7 +1,7 @@
 <template>
   <section class="general-content-list-container sm:border-0 border-[1.5px] border-black rounded-lg flex flex-col bg-white shadow-lg">
 
-    <!-- Mobile DropDownList -->
+    <!-- Mobile DropDownList, replaces the General Content List for better UX in mobile devices -->
     <div class="flex items-center justify-between w-full py-3 sm:hidden px-8 cursor-pointer relative"
     :class="{ 'divider': dropDownList }"
     @click="handleToggleDropDownList">
@@ -24,7 +24,7 @@
       <!--Search Component-->
       <Search :iPhoneModels="iPhoneModels" v-model="searchQuery" @input="handleSearchInput"/>
 
-      <!--Mapped Products-->
+      <!-- Mapped Products -->
       <ul class="general-content-list">
         <li v-for="model, index in filteredModels" :key="index" class="flex flex-col items-center cursor-pointer" @click="handleSelectModel(index)">
           <img class="h-auto w-[190px] transition-transform ease-in-out duration-300 hover:scale-110 transform py-3"

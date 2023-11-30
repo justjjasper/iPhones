@@ -1,4 +1,4 @@
-<!--Specifications Column-->
+<!-- Specifications Column -->
 <template>
   <section class="column1 flex flex-col h-[65vh] rounded-lg pt-6 pb-3 overflow-scroll bg-white shadow-lg">
     <!--Title-->
@@ -6,21 +6,21 @@
       Specifications
     </span>
 
-    <!--Conditional Model Name-->
+    <!-- Conditional Model Name Detail, to compensate for Product comp disappearing during screen resize. Shows users which product they're reading -->
     <div class="column1-list flex flex-col">
       <span class="column1-detail-container-name px-6 py-4">
         <span class="column1-type">• Model: </span>
         <span class="column1-detail">{{ name }}</span>
       </span>
 
-      <!--Mapped out Details, utilized index to manipulate bg-color CSS-->
+      <!-- Mapped out Details, utilized index to manipulate bg-color CSS -->
       <span v-for="({ key, value }, index) in filteredDetails" :key="index" class="column1-detail-container px-6 py-4"
       :class="{'even-detail': index % 2 === 0, 'odd-detail': index % 2 !==0}">
         <span class="column1-type capitalize">• {{ key }}: </span>
         <span class="column1-detail">{{ value }}</span>
       </span>
 
-      <!--Mapped out Other Details, manually mapped otherDetails to control layout more efficiently-->
+      <!-- Mapped out Other Details, manually mapped otherDetails to control layout more efficiently -->
       <span class="column1-other-detail-container px-6 py-4">
         <span class="column1-type">• Other Details: </span>
           <br/>
