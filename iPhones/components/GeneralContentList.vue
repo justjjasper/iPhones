@@ -20,14 +20,12 @@
 
     <!-- General Content List -->
     <div class="general-content-list-container overflow-scroll p-6 h-[45vh] rounded-lg sm:block"
-    :class="{ 'flex': dropDownList, 'hidden': !dropDownList }"
-     >
+    :class="{ 'flex': dropDownList, 'hidden': !dropDownList }">
       <ul class="general-content-list">
         <li v-for="model, index in iPhoneModels" :key="index" class="flex flex-col items-center cursor-pointer" @click="handleSelectModel(index)">
           <img class="h-auto w-[190px] transition-transform ease-in-out duration-300 hover:scale-110 transform py-3"
             :src="model.image"
-            :alt="`Image of ${model.name}`"
-            />
+            :alt="`Image of ${model.name}`"/>
           <span class="text-lg">{{ model.name }}</span>
         </li>
       </ul>
