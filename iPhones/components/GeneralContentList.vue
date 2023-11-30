@@ -26,7 +26,7 @@
 
       <!-- Mapped Products -->
       <ul class="general-content-list">
-        <li v-for="model, index in filteredModels" :key="index" class="flex flex-col items-center cursor-pointer" @click="handleSelectModel(index)">
+        <li v-for="model, index in filteredModels" :key="index" class="flex flex-col items-center cursor-pointer" @click="handleSelectModel(model.id)">
           <img class="h-auto w-[190px] transition-transform ease-in-out duration-300 hover:scale-110 transform py-3"
             :src="model.image"
             :alt="`Image of ${model.name}`"/>

@@ -8,6 +8,7 @@ export interface DetailType {
 }
 
 export interface iPhoneModelType {
+  id: number;
   name: string;
   image: string;
   details: DetailType;
